@@ -143,7 +143,6 @@ const Repos = () => {
   );
 
   function Item({ repo }) {
-    console.log(repo.techStack);
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleOpen = () => setIsOpen(!isOpen);

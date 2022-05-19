@@ -461,7 +461,6 @@ CSSResult Skip Results Iframe EDIT ON body {
 
 .resumeSection {
   padding: 5% 8%;
-  overflow: scroll;
 }
 
 div.swiper-pagination-progressbar.swiper-pagination-horizontal {
@@ -999,31 +998,6 @@ div.swiper-pagination-progressbar.swiper-pagination-horizontal {
   font-family: "Raleway", sans-serif;
 }
 
-@media screen and (max-width: 1035px) {
-  .section h1 {
-    font-size: 5rem;
-  }
-  .parallax h1 {
-    font-size: 2rem;
-  }
-  .line1,
-  .line2 {
-    font-size: 5rem;
-  }
-
-  .line3 {
-    font-size: 3rem;
-  }
-  .desktopContact {
-    width: 85%;
-  }
-  #creditsContainer {
-    margin-left: 5%;
-    margin-top: 2%;
-    font-size: 0.5rem;
-  }
-}
-
 @media screen and (max-width: 950px) {
   .section h1 {
     font-size: 4rem;
@@ -1140,7 +1114,6 @@ div.swiper-pagination-progressbar.swiper-pagination-horizontal {
   }
   .resumeSection {
     padding: 5% 10%;
-    overflow: scroll;
   }
   .desktopContact {
     width: 80%;
@@ -1434,7 +1407,6 @@ div.swiper-pagination-progressbar.swiper-pagination-horizontal {
   }
   .resumeSection {
     padding: 5% 10%;
-    overflow: scroll;
   }
   .desktopContact {
     width: 85%;
@@ -1633,7 +1605,7 @@ div.swiper-pagination-progressbar.swiper-pagination-horizontal {
 
 /* MOBILE */
 
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 415px) {
   .section {
     height: 98vh;
     min-height: 150px;
@@ -1700,7 +1672,7 @@ div.swiper-pagination-progressbar.swiper-pagination-horizontal {
   #resume,
   .desktopContact,
   #allCredits,
-  .section4 {
+  .section4, #banner {
     display: none;
   }
 
@@ -1746,7 +1718,7 @@ div.swiper-pagination-progressbar.swiper-pagination-horizontal {
     font-size: 0.5rem;
   }
   #swipeText {
-    right: 22%;
+    right: 32%;
     font-size: 0.75rem;
   }
   #card a {
@@ -1769,7 +1741,7 @@ div.swiper-pagination-progressbar.swiper-pagination-horizontal {
   .mobileContact {
     display: block;
     width: 75%;
-    height: 120vh;
+    height: 113vh;
   }
   #contact {
     height: 90vh;
@@ -1781,7 +1753,7 @@ div.swiper-pagination-progressbar.swiper-pagination-horizontal {
   }
 
   .block {
-    width: 155vw;
+    width: 130vw;
   }
 
   .memoji {
@@ -1927,7 +1899,7 @@ div.swiper-pagination-progressbar.swiper-pagination-horizontal {
   }
 }
 
-@media screen and (min-width: 2000px), (min-height: 1150px) {
+@media screen and (min-width: 2000px) {
   #logo {
     width: 150px;
     height: 150px;

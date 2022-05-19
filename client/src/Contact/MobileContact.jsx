@@ -15,7 +15,7 @@ const MobileContact = () => {
     [6, 7],
   ];
   const size = 80;
-  const gap = 10;
+  const gap = 20;
   const pushFactor = 0.4;
   const contactInfo = [
     {
