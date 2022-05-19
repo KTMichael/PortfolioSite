@@ -1,0 +1,2078 @@
+CSSResult Skip Results Iframe EDIT ON body {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+/* FUll APP / SCROLLING */
+
+#mainPage {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+  font-family: "Raleway", sans-serif;
+  background-color: #111;
+}
+
+.section {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 98vh;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.section2,
+.section3,
+.section4 {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 8vh;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.transitionTop::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/TTop.jpg");
+  background-size: cover;
+}
+.transitionBottom::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/TBottom.jpg");
+  background-size: cover;
+}
+
+.nonParallax {
+  background-color: #111;
+  z-index: 999;
+}
+
+.section h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: sans-serif;
+}
+
+.parallax h1 {
+  width: 60%;
+  font-size: 2rem;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.bg::after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/neon.jpeg");
+  background-size: cover;
+}
+
+/* USED THROUGHOUT APP */
+.pageTitles {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 10vh;
+  font-family: "Major Mono Display", monospace;
+  cursor: url("./assets/mebunshrugTiny.png") 10 15, pointer;
+}
+
+.icons:hover {
+  color: #83f52c;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.pageLayout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+  height: 95%;
+  width: 100%;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+}
+
+/* INTRO */
+
+.intro {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url("./assets/title.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+#intro {
+  height: 98%;
+  width: 98%;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  overflow-wrap: break-word;
+}
+
+.navL a {
+  bottom: 0;
+  position: absolute;
+  left: 5px;
+  font-size: 2.5rem;
+  color: #5e18eb;
+}
+
+.navR a {
+  bottom: 0;
+  position: absolute;
+  right: 5px;
+  font-size: 2.5rem;
+  color: #5e18eb;
+}
+
+.wrapper {
+  margin-top: 5%;
+  width: 100%;
+  height: 100%;
+}
+
+.line1 {
+  white-space: nowrap; /* keep text in one line */
+  overflow: hidden; /* hide text behind the cursor */
+  margin: 0.5rem auto;
+  font-family: "Major Mono Display", monospace;
+  font-size: 10rem;
+  font-weight: bold;
+  text-align: center;
+  border-right: 3px solid transparent;
+  animation: animated-text1 1s steps(10, end) 1s 1 normal both,
+    animated-cursor 250ms steps(10, end) 8;
+}
+
+.line2 {
+  white-space: nowrap; /* keep text in one line */
+  overflow: hidden; /* hide text behind the cursor */
+  margin: 0.5rem auto;
+  font-family: "Major Mono Display", monospace;
+  font-size: 10rem;
+  font-weight: bold;
+  text-align: center;
+  border-right: 3px solid transparent;
+  animation: animated-text1 1s steps(10, end) 1s 1 normal both,
+    animated-cursor 500ms steps(10, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.line3 {
+  white-space: nowrap; /* keep text in one line */
+  overflow: hidden; /* hide text behind the cursor */
+  margin: 0.5rem auto;
+  font-family: "Major Mono Display", monospace;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  border-right: 3px solid transparent;
+  animation: animated-text2 3s steps(30, end) 3s 1 normal both,
+    animated-cursor 900ms steps(30, end) infinite;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: transparent;
+  }
+  to {
+    border-right-color: white;
+  }
+}
+
+@keyframes animated-text1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 8ch;
+  }
+}
+
+@keyframes animated-text2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 21ch;
+  }
+}
+
+#welcomeText {
+  bottom: 10px;
+  position: absolute;
+  width: 100%;
+}
+
+/* NAVBAR */
+#nav {
+  align-items: flex-end;
+  display: flex;
+  margin: 0;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+}
+
+#pageLinks {
+  position: absolute;
+  right: 1%;
+}
+
+#pageLinks a {
+  padding: 0px 10px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: auto;
+  color: #5e18eb;
+}
+
+#pageLinks a:hover {
+  color: #f52cd0;
+}
+
+/* ABOUT ME */
+
+#aboutMeContainer {
+  width: 85%;
+  text-align: center;
+}
+
+#aboutMe {
+  margin: 0 auto;
+  width: 85%;
+  font-size: 1.5rem;
+}
+
+#aboutMeIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 5%;
+  font-size: 3rem;
+  padding-bottom: 10%;
+  cursor: url("./assets/PaintCan.png") 10 15, pointer;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(2);
+  }
+  50% {
+    transform: rotate(5deg) scale(2);
+  }
+  55% {
+    transform: rotate(-5deg) scale(2);
+  }
+  60% {
+    transform: rotate(0deg) scale(2);
+  }
+  65% {
+    transform: rotate(5deg) scale(2);
+  }
+  70% {
+    transform: rotate(-5deg) scale(2);
+  }
+  75% {
+    transform: rotate(0deg) scale(2);
+  }
+  80% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.iconContainer {
+  text-align: center;
+}
+.iconContainer p {
+  visibility: hidden;
+  opacity: 0;
+  font-size: 0.01rem;
+}
+
+.iconContainer:hover p {
+  visibility: visible;
+  opacity: 1;
+  font-size: 1rem;
+  transition: visibility 0s, opacity 0.5s linear;
+  padding-top: 10px;
+}
+
+.iconContainer:hover div {
+  animation: wiggle 3s;
+  padding: 0px 25px;
+}
+
+#js:hover {
+  color: #ff0000;
+}
+#pg:hover {
+  color: #dc1d00;
+}
+#ms:hover {
+  color: #d75200;
+}
+#nd:hover {
+  color: #e2be00;
+}
+#dk:hover {
+  color: #d7f500;
+}
+#rt:hover {
+  color: #72fa08;
+}
+#pm:hover {
+  color: #1bff4e;
+}
+#gcp:hover {
+  color: #1cffc6;
+}
+#aws:hover {
+  color: #1bf8ff;
+}
+#ax:hover {
+  color: #16b2ff;
+}
+#wp:hover {
+  color: #0c68ff;
+}
+#bb:hover {
+  color: #190ffe;
+}
+#db:hover {
+  color: #5308fe;
+}
+#cs:hover {
+  color: #9504fd;
+}
+#hl:hover {
+  color: #5f02a2;
+}
+#npm:hover {
+  color: #682860;
+}
+
+#aboutMeContainer span {
+  animation: bounce 500ms;
+  animation-iteration-count: 40;
+  animation-delay: 20s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+
+/* QUOTE */
+
+#quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+}
+
+#quote p {
+  font-size: 4rem;
+  text-align: center;
+}
+
+#author {
+  font-size: 2rem;
+}
+
+/* RESUME */
+
+#resumeSections {
+  height: 80%;
+  width: 85%;
+}
+
+.resume li {
+  font-size: 0.85rem;
+  width: 80%;
+  color: #ff2079;
+  list-style-type: "\003E";
+  padding-left: 1em;
+}
+
+.resume li span {
+  color: white;
+  display: block;
+  margin-left: -0.5em;
+}
+
+.techSkill {
+  padding: 15px 0px;
+  text-decoration-style: solid;
+}
+
+.containerIntroEdu {
+  padding-bottom: 30px;
+}
+
+.resumeSection {
+  padding: 5% 8%;
+  overflow: scroll;
+}
+
+div.swiper-pagination-progressbar.swiper-pagination-horizontal {
+  width: 80%;
+  height: 4px;
+  left: 10%;
+  bottom: 0;
+  top: 0;
+  background-color: #ff2079;
+  border-radius: 10px;
+}
+
+#downloadCV {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 1.5rem;
+  padding: 0 5%;
+}
+#download {
+  margin-top: 5%;
+  font-size: 3rem;
+  color: #ff2079;
+}
+
+#download:hover {
+  color: #ff2079;
+}
+
+.accent {
+  color: #ff2079;
+}
+
+/* WORK */
+
+#workContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 85%;
+  height: 90%;
+  color: white;
+}
+
+#workContainer button {
+  border: transparent;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  background-color: black;
+  border: solid white 1px;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+}
+
+#workContainer button:hover {
+  background-color: #00fefc;
+  color: black;
+  border: black;
+}
+/* REPOS */
+
+#repoCards,
+#repoCards li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#repoCards {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  background: #651fff;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: scroll;
+  margin: 0 auto;
+}
+
+#repoCards li {
+  background-color: #04005e;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#repoCards li:last-child {
+  margin-bottom: 0;
+}
+
+#repoContainer {
+  overflow: scroll;
+  margin: 2% auto;
+  background: #651fff;
+  border-radius: 10px;
+  width: 55%;
+}
+
+#workRepoTitle {
+  font-size: 1rem;
+  color: #4100cc;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+#workRepoTitle span {
+  margin: 10px 0px;
+}
+#workRepos {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  margin-top: 5px;
+}
+
+.row p {
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.row a {
+  color: white;
+  text-decoration: none;
+  border: solid 1px white;
+  padding: 5px;
+  border-radius: 9px;
+  vertical-align: middle;
+}
+
+.row a:hover {
+  color: #ff2079;
+  background-color: #111;
+}
+
+.row div {
+  width: 100%;
+  text-align: center;
+}
+
+.row span {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 4%;
+  color: white;
+  justify-content: center;
+}
+.row span:hover {
+  color: #8f5cff;
+}
+
+.ghub {
+  position: relative;
+  top: 4px;
+  font-size: 1.25rem;
+}
+
+/* APPLICATIONS */
+
+#cardContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  color: black;
+}
+#cardTitles {
+  font-weight: 700;
+}
+
+#cardWrap {
+  position: relative;
+  width: 80vw;
+  height: 40vh;
+}
+
+#cardStyle {
+  position: absolute;
+  width: 82vw;
+  height: 63vh;
+  border-radius: 8px;
+  transform-origin: top center;
+  list-style: none;
+  padding: 10px;
+  text-align: center;
+  border: solid white 1px;
+  color: white;
+}
+
+.ATL,
+.WAM {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+}
+.ATL:hover {
+  background-color: #ff2079;
+}
+.WAM:hover {
+  background-color: #9cff00;
+  color: black;
+}
+
+#card {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5vh;
+}
+
+#cardStyle h3 {
+  font-size: 4rem;
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+#card p {
+  padding: 20px;
+  margin-top: 10vh;
+}
+
+#appInfo {
+  width: 55%;
+}
+
+#appInfo p {
+  margin-top: 2%;
+}
+
+#ATVideo video {
+  height: auto !important;
+  width: 100% !important;
+}
+
+#ATVideo {
+  background-color: black;
+  height: 48vh;
+  width: 35vw;
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+}
+#WAMVideo video {
+  height: auto !important;
+  width: 100% !important;
+}
+
+#WAMVideo {
+  background-color: black;
+  height: 48vh;
+  width: 33vw;
+  border-radius: 12px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#swipeText {
+  position: absolute;
+  bottom: 10%;
+  text-align: center;
+  right: 40%;
+}
+#card a {
+  padding: 0px 10px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: auto;
+  color: white;
+  font-weight: 900;
+}
+
+#card a:hover {
+  color: #f52cd0;
+}
+
+#techStackBannerW {
+  background-color: black;
+  border: solid white 1px;
+  color: white;
+  max-width: 90%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+#techStackBannerW:hover {
+  max-width: 90%;
+  overflow: hidden;
+  background: #ff2079;
+  color: black;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+#techStackBannerA {
+  background-color: black;
+  border: solid white 1px;
+  color: white;
+  max-width: 90%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+#techStackBannerA:hover {
+  max-width: 90%;
+  overflow: hidden;
+  background: #9cff00;
+  color: black;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.techStackW {
+  height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+  padding-top: 2px;
+}
+
+.techStackA {
+  height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 60s linear infinite;
+  padding-top: 2px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+#wam,
+#atl {
+  color: white;
+}
+
+/* CONTACT */
+.mobileContact {
+  display: none;
+}
+.desktopContact {
+  width: 85%;
+}
+.block {
+  font-family: sans-serif;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+#contactContainer {
+  display: grid;
+  grid-template-rows: 5% 95%;
+  height: 100%;
+  width: 85%;
+}
+
+#linkDirections {
+  height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 60s linear infinite;
+  padding-top: 2px;
+}
+
+#banner {
+  color: white;
+  max-width: 85%;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 100%;
+  padding-top: 1%;
+}
+
+.contactSquare {
+  width: 100%;
+  height: 100%;
+  margin: -10% 0% 10% 0%;
+}
+
+.memoji {
+  width: 100%;
+  height: auto;
+}
+
+.meBunWink {
+  width: 100px;
+  height: 100px;
+  background-image: url("./assets/meBunWink.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 25% auto;
+}
+.meBunWink:hover {
+  background-image: url("./assets/meBunCross.png");
+}
+
+.meLipstickSmile {
+  width: 100px;
+  height: 100px;
+  background-image: url("./assets/meLipstickSmile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 25% auto;
+}
+.meLipstickSmile:hover {
+  background-image: url("./assets/meLipstickPonder.png");
+}
+
+.meComputer {
+  width: 100px;
+  height: 100px;
+  background-image: url("./assets/meComputer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 25% auto;
+}
+
+.meComputer:hover {
+  background-image: url("./assets/meLipstickPeace.png");
+}
+
+.meLipstickThumpsUp {
+  width: 100px;
+  height: 100px;
+  background-image: url("./assets/meLipstickThumpsUp.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 25% auto;
+  margin: 25% auto;
+}
+
+.meLipstickThumpsUp:hover {
+  background-image: url("./assets/meLipstickPoundIt.png");
+}
+
+.meHatWink {
+  width: 100px;
+  height: 100px;
+  background-image: url("./assets/meHatWink.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 25% auto;
+}
+
+.meHatWink:hover {
+  background-image: url("./assets/meHatWinkTongueOut.png");
+}
+
+/* CREDITS */
+
+#creditTitle {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 5vh;
+  font-family: "Major Mono Display", monospace;
+  cursor: url(./assets/mebunshrugTiny.png) 10 15, pointer;
+  color: white;
+}
+.creditLayout {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+}
+
+#creditsContainer span {
+  color: white;
+  font-size: 1rem;
+  left: 2%;
+}
+#creditsContainer {
+  margin-left: 5%;
+}
+
+.container {
+  margin: 4.5rem 1.4rem;
+}
+
+.btnContainer {
+  position: fixed;
+  right: 2%;
+}
+
+.container a {
+  color: #f9fafb;
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-weight: 600;
+  display: block;
+  margin: 20px;
+}
+
+#creditButton {
+  border: transparent;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  background-color: black;
+  border: solid white 1px;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#creditButton a {
+  text-decoration: none;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+@media screen and (max-width: 1035px) {
+  .section h1 {
+    font-size: 5rem;
+  }
+  .parallax h1 {
+    font-size: 2rem;
+  }
+  .line1,
+  .line2 {
+    font-size: 5rem;
+  }
+
+  .line3 {
+    font-size: 3rem;
+  }
+  .desktopContact {
+    width: 85%;
+  }
+  #creditsContainer {
+    margin-left: 5%;
+    margin-top: 2%;
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .section h1 {
+    font-size: 4rem;
+  }
+  .parallax h1 {
+    font-size: 1rem;
+  }
+  .line1,
+  .line2 {
+    font-size: 4rem;
+  }
+
+  .line3 {
+    font-size: 2rem;
+  }
+  .desktopContact {
+    width: 85%;
+  }
+  #creditsContainer {
+    margin-left: 5%;
+    margin-top: 2%;
+    font-size: 0.5rem;
+  }
+  @keyframes animated-text2 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 23ch;
+    }
+  }
+  .pageTitles {
+    font-size: 3rem;
+  }
+  #aboutMe {
+    font-size: 1rem;
+  }
+  #aboutMeIcons {
+    font-size: 1.5rem;
+  }
+
+  #quote p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #author {
+    font-size: 1rem;
+  }
+  #swipeText {
+    right: 38%;
+  }
+
+  #workContainer button {
+    font-size: 0.75rem;
+    padding: 9px;
+  }
+  #appInfo {
+    width: 50%;
+    margin-bottom: -10%;
+  }
+  #appInfo p {
+    margin-top: 2%;
+    margin-bottom: -12%;
+  }
+  #cardStyle h3 {
+    font-size: 1rem;
+    margin-top: -8%;
+  }
+  #card {
+    display: flex;
+    flex-direction: row;
+  }
+  #card p {
+    font-size: 0.75rem;
+    margin-bottom: -5%;
+  }
+  #ATVideo {
+    height: 25%;
+    width: 75%;
+    margin-right: 1px;
+  }
+  #wam,
+  #atl {
+    color: white;
+    font-size: 0.5rem;
+  }
+  #swipeText {
+    right: 39%;
+    font-size: 0.75rem;
+  }
+  #card a {
+    font-size: 0.75rem;
+  }
+
+  .techStackW,
+  .techStackA {
+    font-size: 0.75rem;
+    padding-top: 3px;
+    height: 16px;
+  }
+  #WAMVideo {
+    height: 7%;
+    width: 68%;
+    margin-right: 1px;
+  }
+  #repoContainer {
+    width: 95%;
+    font-size: 0.5rem;
+  }
+  .row p {
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .resumeSection {
+    padding: 5% 10%;
+    overflow: scroll;
+  }
+  .desktopContact {
+    width: 80%;
+  }
+  #contactContainer {
+    display: grid;
+    grid-template-rows: 1% 84%;
+    height: 100%;
+    width: 85%;
+  }
+  #linkDirections {
+    margin-bottom: -1%;
+  }
+  .block {
+    width: 110vw;
+  }
+  #banner {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .section h1 {
+    font-size: 4rem;
+  }
+  .parallax h1 {
+    font-size: 1rem;
+  }
+  .line1,
+  .line2 {
+    font-size: 4rem;
+  }
+
+  .line3 {
+    font-size: 2rem;
+  }
+  .section2,
+  .section3,
+  .section4 {
+    min-height: 75px;
+  }
+  .desktopContact {
+    width: 85%;
+  }
+  #creditsContainer {
+    margin-left: 5%;
+    margin-top: 2%;
+    font-size: 0.5rem;
+  }
+  @keyframes animated-text2 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 23ch;
+    }
+  }
+  .pageTitles {
+    font-size: 3rem;
+  }
+  #aboutMe {
+    font-size: 1rem;
+  }
+  #aboutMeIcons {
+    font-size: 1.5rem;
+  }
+
+  #quote p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #author {
+    font-size: 1rem;
+  }
+  #swipeText {
+    right: 38%;
+  }
+
+  #workContainer button {
+    font-size: 0.75rem;
+    padding: 9px;
+  }
+  #appInfo {
+    width: 50%;
+    margin-bottom: -10%;
+  }
+  #appInfo p {
+    margin-top: 2%;
+    margin-bottom: -12%;
+  }
+  #cardStyle h3 {
+    font-size: 1rem;
+    margin-top: -8%;
+  }
+  .ghub {
+    font-size: 1rem;
+  }
+  #card {
+    display: flex;
+    flex-direction: row;
+  }
+  #card p {
+    font-size: 0.75rem;
+    margin-bottom: -5%;
+  }
+  .techStackW,
+  .techStackA {
+    font-size: 0.75rem;
+    padding-top: 3px;
+    height: 16px;
+  }
+  #ATVideo {
+    height: 25%;
+    width: 75%;
+  }
+  #wam,
+  #atl {
+    color: white;
+    font-size: 0.5rem;
+  }
+  #swipeText {
+    right: 39%;
+    font-size: 0.75rem;
+  }
+  #card a {
+    font-size: 0.75rem;
+  }
+  #WAMVideo {
+    height: 7%;
+    width: 68%;
+    margin: 7% auto;
+  }
+  #repoContainer {
+    width: 95%;
+    font-size: 0.5rem;
+  }
+  .row p {
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .resumeSection {
+    font-size: 0.75rem;
+  }
+
+  .resume li {
+    font-size: 0.65rem;
+    width: 80%;
+    color: #ff2079;
+    list-style-type: "\003E";
+    padding-left: 1em;
+  }
+
+  .desktopContact {
+    width: 80%;
+  }
+  #contactContainer {
+    display: grid;
+    grid-template-rows: 3% 82%;
+    height: 100%;
+    width: 85%;
+  }
+  #linkDirections {
+    margin-bottom: -1%;
+  }
+  .block {
+    width: 125vw;
+  }
+  #banner {
+    width: 72%;
+  }
+}
+
+@media screen and (max-height: 565px) {
+  .section h1 {
+    font-size: 4rem;
+  }
+  .parallax h1 {
+    font-size: 1rem;
+  }
+  .line1,
+  .line2 {
+    font-size: 4rem;
+  }
+
+  .line3 {
+    font-size: 2rem;
+  }
+  .desktopContact {
+    width: 85%;
+  }
+  .section2,
+  .section3,
+  .section4 {
+    min-height: 75px;
+  }
+  #creditsContainer {
+    margin-left: 5%;
+    margin-top: 2%;
+    font-size: 0.5rem;
+  }
+  @keyframes animated-text2 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 23ch;
+    }
+  }
+  .pageTitles {
+    font-size: 3rem;
+  }
+  #aboutMe {
+    font-size: 1rem;
+  }
+  #aboutMeIcons {
+    font-size: 1.5rem;
+  }
+
+  #quote p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #author {
+    font-size: 1rem;
+  }
+  #swipeText {
+    right: 38%;
+  }
+
+  #workContainer button {
+    font-size: 0.75rem;
+    padding: 9px;
+  }
+  #appInfo {
+    width: 100%;
+  }
+  #appInfo p {
+    margin-top: 2%;
+    margin-bottom: -12%;
+  }
+  #cardStyle h3 {
+    font-size: 1rem;
+    margin-top: -8%;
+  }
+  #card {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  #card p {
+    font-size: 0.75rem;
+    margin-bottom: -5%;
+  }
+  .techStackW,
+  .techStackA {
+    font-size: 0.75rem;
+    padding-top: 3px;
+    height: 16px;
+  }
+  #WAMVideo {
+    height: auto;
+    width: 99%;
+    margin: -1% auto 1% auto;
+  }
+  #ATVideo {
+    height: auto;
+    width: 95%;
+    margin: 0 auto;
+  }
+  #wam,
+  #atl {
+    color: white;
+    font-size: 0.5rem;
+  }
+  #swipeText {
+    right: 43%;
+    bottom: 5%;
+    font-size: 0.75rem;
+  }
+  #card a {
+    font-size: 0.75rem;
+  }
+  #repoContainer {
+    width: 95%;
+    font-size: 0.5rem;
+  }
+  .row p {
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .resumeSection {
+    padding: 5% 10%;
+    overflow: scroll;
+  }
+  .desktopContact {
+    width: 85%;
+  }
+  #contactContainer {
+    display: grid;
+    grid-template-rows: 3% 82%;
+    height: 100%;
+    width: 85%;
+  }
+  #linkDirections {
+    margin-bottom: -1%;
+  }
+  .block {
+    width: 125vw;
+  }
+  #banner {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 485px) {
+  .ghub {
+    font-size: 1rem;
+  }
+  #WAMVideo {
+    height: auto;
+    width: 99%;
+    margin: -1% auto 1% auto;
+  }
+  #ATVideo {
+    height: auto;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .resumeSection {
+    font-size: 0.75rem;
+  }
+
+  .resume li {
+    font-size: 0.65rem;
+    width: 80%;
+    color: #ff2079;
+    list-style-type: "\003E";
+    padding-left: 1em;
+  }
+  .block {
+    width: 120vw;
+  }
+  .desktopContact {
+    display: none;
+  }
+  .mobileContact {
+    display: block;
+    width: 75%;
+    height: 120vh;
+  }
+  .meBunWink {
+    width: 100px;
+    height: 100px;
+    background-image: url("./assets/meBunWink.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 25% auto;
+  }
+  .meBunWink:hover {
+    background-image: url("./assets/meBunCross.png");
+  }
+
+  .meLipstickSmile {
+    width: 100px;
+    height: 100px;
+    background-image: url("./assets/meLipstickSmile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 25% auto;
+  }
+  .meLipstickSmile:hover {
+    background-image: url("./assets/meLipstickPonder.png");
+  }
+
+  .meComputer {
+    width: 100px;
+    height: 100px;
+    background-image: url("./assets/meComputer.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 25% auto;
+  }
+
+  .meComputer:hover {
+    background-image: url("./assets/meLipstickPeace.png");
+  }
+
+  .meLipstickThumpsUp {
+    width: 100px;
+    height: 100px;
+    background-image: url("./assets/meLipstickThumpsUp.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 25% auto;
+    margin: 25% auto;
+  }
+
+  .meLipstickThumpsUp:hover {
+    background-image: url("./assets/meLipstickPoundIt.png");
+  }
+
+  .meHatWink {
+    width: 100px;
+    height: 100px;
+    background-image: url("./assets/meHatWink.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 25% auto;
+  }
+
+  .meHatWink:hover {
+    background-image: url("./assets/meHatWinkTongueOut.png");
+  }
+  .contactSquare {
+    width: 100%;
+    height: 100%;
+    margin: -10% 0% 10% 0%;
+  }
+
+  .memoji {
+    width: 100%;
+    height: auto;
+  }
+
+  .meBunWink {
+    width: 55px;
+    height: 55px;
+    background-image: url("./assets/meBunWink.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20% auto;
+  }
+  .meBunWink:hover {
+    background-image: url("./assets/meBunCross.png");
+  }
+
+  .meLipstickSmile {
+    width: 55px;
+    height: 55px;
+    background-image: url("./assets/meLipstickSmile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20% auto;
+  }
+  .meLipstickSmile:hover {
+    background-image: url("./assets/meLipstickPonder.png");
+  }
+
+  .meComputer {
+    width: 55px;
+    height: 55px;
+    background-image: url("./assets/meComputer.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20% auto;
+  }
+
+  .meComputer:hover {
+    background-image: url("./assets/meLipstickPeace.png");
+  }
+
+  .meLipstickThumpsUp {
+    width: 55px;
+    height: 55px;
+    background-image: url("./assets/meLipstickThumpsUp.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20% auto;
+  }
+
+  .meLipstickThumpsUp:hover {
+    background-image: url("./assets/meLipstickPoundIt.png");
+  }
+
+  .meHatWink {
+    width: 55px;
+    height: 55px;
+    background-image: url("./assets/meHatWink.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20% auto;
+  }
+
+  .meHatWink:hover {
+    background-image: url("./assets/meHatWinkTongueOut.png");
+  }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 280px) {
+  .section {
+    height: 98vh;
+    min-height: 150px;
+  }
+  .section2,
+  .section3 {
+    min-height: 75px;
+  }
+
+  #nav {
+    margin-bottom: 5px;
+  }
+  #logo {
+    width: 50px;
+    height: 50px;
+  }
+  .section h1 {
+    font-size: 3rem;
+  }
+  .parallax h1 {
+    font-size: 2rem;
+  }
+
+  .line1 {
+    font-size: 2rem;
+    margin-top: 10%;
+  }
+  .line2 {
+    font-size: 2rem;
+  }
+
+  #welcomeText {
+    bottom: 10px;
+    position: absolute;
+    width: 100%;
+    height: 40%;
+  }
+  .line3 {
+    font-size: 0.75rem;
+  }
+  @keyframes animated-text2 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 25ch;
+    }
+  }
+  .pageTitles {
+    font-size: 5vh;
+  }
+  #aboutMe {
+    font-size: 0.65rem;
+    margin-top: 15%;
+  }
+  .navR,
+  .navL,
+  #aboutMeContainer span,
+  #aboutMeIcons,
+  #techStackBannerA,
+  #techStackBannerW,
+  .row span,
+  .ghub,
+  #resume,
+  .desktopContact,
+  #allCredits,
+  .section4 {
+    display: none;
+  }
+
+  #quote p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  #author {
+    font-size: 0.75rem;
+  }
+
+  #workContainer button {
+    font-size: 0.55rem;
+    padding: 9px;
+  }
+  #appInfo {
+    width: 100%;
+    margin-bottom: -10%;
+  }
+  #appInfo p {
+    margin-top: 2%;
+    margin-bottom: -12%;
+  }
+  #cardStyle h3 {
+    font-size: 1rem;
+    margin-top: -15%;
+  }
+  #card {
+    display: flex;
+    flex-direction: column;
+  }
+  #card p {
+    font-size: 0.5rem;
+  }
+  #ATVideo {
+    height: 50%;
+    width: 95%;
+    margin-top: 15%;
+  }
+  #wam,
+  #atl {
+    color: white;
+    font-size: 0.5rem;
+  }
+  #swipeText {
+    right: 22%;
+    font-size: 0.75rem;
+  }
+  #card a {
+    padding: 0px 0px;
+    font-size: 0.5rem;
+  }
+  #WAMVideo {
+    height: 29vh;
+    width: 70vw;
+  }
+  #repoContainer {
+    width: 95%;
+    font-size: 0.5rem;
+  }
+  .row p {
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .mobileContact {
+    display: block;
+    width: 75%;
+    height: 120vh;
+  }
+  #contact {
+    height: 90vh;
+  }
+  .contactSquare {
+    width: 100%;
+    height: 100%;
+    margin: -10% 0% 10% 0%;
+  }
+
+  .block {
+    width: 155vw;
+  }
+
+  .memoji {
+    width: 100%;
+    height: auto;
+  }
+
+  .meBunWink {
+    width: 100px;
+    height: 100px;
+    background-image: url("./assets/meBunWink.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 25% auto;
+  }
+  .meBunWink:hover {
+    background-image: url("./assets/meBunCross.png");
+  }
+
+  .meLipstickSmile {
+    width: 100px;
+    height: 100px;
+    background-image: url("./assets/meLipstickSmile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 25% auto;
+  }
+  .meLipstickSmile:hover {
+    background-image: url("./assets/meLipstickPonder.png");
+  }
+
+  .meComputer {
+    width: 100px;
+    height: 100px;
+    background-image: url("./assets/meComputer.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 25% auto;
+  }
+
+  .meComputer:hover {
+    background-image: url("./assets/meLipstickPeace.png");
+  }
+
+  .meLipstickThumpsUp {
+    width: 100px;
+    height: 100px;
+    background-image: url("./assets/meLipstickThumpsUp.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 25% auto;
+    margin: 25% auto;
+  }
+
+  .meLipstickThumpsUp:hover {
+    background-image: url("./assets/meLipstickPoundIt.png");
+  }
+
+  .meHatWink {
+    width: 100px;
+    height: 100px;
+    background-image: url("./assets/meHatWink.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 25% auto;
+  }
+
+  .meHatWink:hover {
+    background-image: url("./assets/meHatWinkTongueOut.png");
+  }
+  .contactSquare {
+    width: 100%;
+    height: 100%;
+    margin: -10% 0% 10% 0%;
+  }
+
+  .memoji {
+    width: 100%;
+    height: auto;
+  }
+
+  .meBunWink {
+    width: 55px;
+    height: 55px;
+    background-image: url("./assets/meBunWink.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20% auto;
+  }
+  .meBunWink:hover {
+    background-image: url("./assets/meBunCross.png");
+  }
+
+  .meLipstickSmile {
+    width: 55px;
+    height: 55px;
+    background-image: url("./assets/meLipstickSmile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20% auto;
+  }
+  .meLipstickSmile:hover {
+    background-image: url("./assets/meLipstickPonder.png");
+  }
+
+  .meComputer {
+    width: 55px;
+    height: 55px;
+    background-image: url("./assets/meComputer.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20% auto;
+  }
+
+  .meComputer:hover {
+    background-image: url("./assets/meLipstickPeace.png");
+  }
+
+  .meLipstickThumpsUp {
+    width: 55px;
+    height: 55px;
+    background-image: url("./assets/meLipstickThumpsUp.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20% auto;
+  }
+
+  .meLipstickThumpsUp:hover {
+    background-image: url("./assets/meLipstickPoundIt.png");
+  }
+
+  .meHatWink {
+    width: 55px;
+    height: 55px;
+    background-image: url("./assets/meHatWink.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20% auto;
+  }
+
+  .meHatWink:hover {
+    background-image: url("./assets/meHatWinkTongueOut.png");
+  }
+}
+
+@media screen and (min-width: 2000px), (min-height: 1150px) {
+  #logo {
+    width: 150px;
+    height: 150px;
+  }
+  #pageLinks {
+    font-size: 2rem;
+  }
+  .pageTitles {
+    font-size: 9rem;
+  }
+  .line1,
+  .line2 {
+    font-size: 15rem;
+  }
+
+  .line3 {
+    font-size: 5rem;
+  }
+
+  @keyframes animated-text2 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 23ch;
+    }
+  }
+
+  #aboutMe {
+    font-size: 2rem;
+  }
+  #aboutMeIcons {
+    font-size: 4.5rem;
+    gap: 15px;
+  }
+  #quote p {
+    font-size: 5rem;
+    text-align: center;
+  }
+  #author {
+    font-size: 3rem;
+  }
+
+  #workContainer button {
+    font-size: 3rem;
+    padding: 15px;
+  }
+  #wam,
+  #atl {
+    font-size: 1rem;
+  }
+  #appInfo {
+    width: 50%;
+    margin-top: 7%;
+  }
+  #appInfo p {
+    margin-top: 2%;
+    margin-bottom: -12%;
+  }
+  #cardStyle h3 {
+    font-size: 7rem;
+    margin-top: -8%;
+  }
+  #card {
+    display: flex;
+    flex-direction: row;
+  }
+  #card p {
+    font-size: 2rem;
+    margin-bottom: 0%;
+  }
+  #ATVideo {
+    height: 25%;
+    width: 75%;
+    margin: 0% 1%;
+  }
+  #WAMVideo {
+    height: 6%;
+  }
+  #techStackBannerA,
+  #techStackBannerW {
+    width: 50%;
+    margin-top: 5%;
+  }
+  #swipeText {
+    right: 50%;
+    font-size: 1rem;
+  }
+  #workRepoTitle {
+    font-size: 2rem;
+  }
+
+  #card a {
+    font-size: 1rem;
+  }
+  #repoContainer {
+    width: 95%;
+    font-size: 2rem;
+  }
+
+  .ghub {
+    font-size: 2rem;
+  }
+
+  .row span {
+    font-size: 2rem;
+  }
+  .resumeSection {
+    font-size: 2rem;
+  }
+
+  .resume li {
+    font-size: 1.5rem;
+    border-radius: 10px;
+    width: 80%;
+    color: #ff2079;
+    list-style-type: "\003E";
+    padding-left: 1em;
+  }
+
+  #banner {
+    width: 80%;
+  }
+  #allCubes {
+    display: flex;
+    width: 970px;
+    height: 640px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    perspective: 400;
+  }
+  .desktopContact {
+    width: 80%;
+  }
+  .block {
+    width: 110vw;
+  }
+  .desktopContact {
+    width: 85%;
+  }
+  #creditsContainer {
+    margin-left: 5%;
+    margin-top: 2%;
+    font-size: 0.5rem;
+  }
+}
